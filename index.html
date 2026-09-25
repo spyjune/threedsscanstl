@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>3D Scan</title>
+</head>
+
+<body>
+<main>
+
+  <header>
+    <div>
+      <h1>3D Scan</h1>
+      <p>Camera → 3D Scan</p>
+    </div>
+    <b id="count">0</b>
+  </header>
+
+  <section class="viewer">
+    <video id="video" autoplay playsinline muted></video>
+
+    <div class="guide">
+      <div class="reticle"></div>
+      <span id="status">Tap Start Scan</span>
+    </div>
+  </section>
+
+  <section class="buttons">
+
+    <button id="start" class="primary">
+      Start Scan
+    </button>
+
+    <button id="snap" disabled>
+      Capture
+    </button>
+
+    <button id="finish" disabled>
+      Finish
+    </button>
+
+    <button id="export" disabled>
+      Export Photos
+    </button>
+
+  </section>
+
+  <section class="card">
+    <h2>How to scan</h2>
+
+    <ol>
+      <li>Place the object on a stable surface.</li>
+      <li>Use bright, even lighting.</li>
+      <li>Keep the object inside the square.</li>
+      <li>Move slowly around the object.</li>
+      <li>Capture overlapping views.</li>
+      <li>Capture the top and all sides.</li>
+    </ol>
+
+    <p class="note">
+      Your iPhone 15 camera is used for the scan.
+      The captured images can be processed into a 3D mesh
+      and eventually exported as an STL.
+    </p>
+  </section>
+
+</main>
+
+<canvas id="canvas" hidden></canvas>
+
+<script src="app.js"></script>
+
+</body>
+</html>

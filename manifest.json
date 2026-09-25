@@ -1,0 +1,8 @@
+{
+  "name": "3D Scan",
+  "short_name": "3D Scan",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#111111"
+}
